@@ -1,6 +1,18 @@
 <?php
 class Task
 {
+    function arrayShift($array){
+        foreach($array as $value) {
+            return $value;
+        }
+    }
+    function arraySearch($array, $search){
+        foreach($array as $key => $value) {
+            if($value == $search){
+                return $key;
+            }
+        }
+    }
     function arrayChangeKeyCase($array)
     {
         $newArray = [];
@@ -234,6 +246,31 @@ class Task
         return $array[$num - 1];
     }
 }
+// $fname = ['mmm', ["35", "37", ['23'], ['90', ['569', ['96']]]], ["43", "30"], ["24", "47"], ["27"]];
+// // $combineArray = [];
+// $taskObj = new Task();
+// $result = $taskObj->arrayCombine($fname);
+
+// echo "<pre>";
+// print_r($result);
+// exit;
+
+$array = ["a"=>"red","b"=>"green","c"=>"blue"];
+$taskObj = new Task();
+$result = $taskObj->arrayShift($array);
+
+echo "<pre>";
+print_r($result);
+exit;
+
+$array = ["a"=>"red","b"=>"green","c"=>"blue"];
+$taskObj = new Task();
+$result = $taskObj->arraySearch($array, 'green');
+
+echo "<pre>";
+print_r($result);
+exit;
+
 
 $array = ["Peter" => "35", "Ben" => "37", "Joe" => "43"];
 $taskObj = new Task();
