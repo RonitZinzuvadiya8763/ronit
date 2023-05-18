@@ -1,6 +1,7 @@
 <?php
 // echo "hi";
 // exit;
-include("inheriance.php");
+
+include("singleInheritance.php");
 exit;
 include("basic-oop.php");
