@@ -1,22 +1,38 @@
 <?php
   class ParentClass {
-    public $name = "Ronit"; 
-    function welcome(){
-      echo "Parent Class Called";
+    public function vehicle(){
+      //return $this->vehicle();
+      echo "I am Vehical.<br>";
+    }
+
+    protected function vehicle1(){
+      echo "I am Vehical1.<br>";
+    }
+
+    private function vehical2(){
+      echo "I am Vehical2.<br>";
     }
   }
 
   class ChildClass extends ParentClass{
-    public $age = 20;
-    function show(){
-      echo "Child Class Called<br>";
-    }
   }
+  
+  //public
+  // $pub = new ParentClass;
+  // $pub->vehicle();
 
-  $obj = new ChildClass;
-  echo $obj->age;
-  echo $obj->$name;
-  echo "<br>";
-  $obj->show();
-  $obj->welcome();
+  //protected
+  // $ppro = new ParentClass;
+  // $ppro->vehicle();
+
+  // $cpro = new ChildClass;
+  // $cpro->vehicle();
+  
+  //private
+  // $ppri = new ParentClass();
+  // $ppri->vehicle2(); // private function
+  
+  $cpri = new ChildClass;
+  $cpri->vehicle(); // public function
+  
 ?>

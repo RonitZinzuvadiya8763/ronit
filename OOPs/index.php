@@ -1,5 +1,8 @@
 <?php
 
+// include("protectedModfier.php");
+// exit;
+
 include("publicModifier.php");
 exit;
 
