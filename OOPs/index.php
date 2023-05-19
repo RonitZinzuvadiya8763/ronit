@@ -1,9 +1,13 @@
 <?php
 
-// include("protectedModfier.php");
+
+// include("publicModifier.php");
 // exit;
 
-include("publicModifier.php");
+// require("protectedModifier.php");
+// exit;
+
+require("privateModifier.php");
 exit;
 
 include("includeRequiredUse1.php");

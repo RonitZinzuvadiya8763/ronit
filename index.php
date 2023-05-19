@@ -3,8 +3,21 @@ class Task
 {
     function arrayShift($array){
         foreach($array as $value) {
-            return $value;
+            if (in_array($value, $array)){                
+                return $value;
+            }
         }
+    }
+    function arraySlice($array, $element){ // 2
+        $slicedArray = [];
+        $slicedkey = 0;
+        foreach($array as $key => $value) {
+            if(!($element > $key)){ // 2 > 0
+                $slicedArray[$slicedkey] = $value;
+                $slicedkey = $slicedkey + 1;
+            }
+        }
+        return $slicedArray;
     }
     function arraySearch($array, $search){
         foreach($array as $key => $value) {
@@ -246,14 +259,7 @@ class Task
         return $array[$num - 1];
     }
 }
-// $fname = ['mmm', ["35", "37", ['23'], ['90', ['569', ['96']]]], ["43", "30"], ["24", "47"], ["27"]];
-// // $combineArray = [];
-// $taskObj = new Task();
-// $result = $taskObj->arrayCombine($fname);
 
-// echo "<pre>";
-// print_r($result);
-// exit;
 
 $array = ["a"=>"red","b"=>"green","c"=>"blue"];
 $taskObj = new Task();
@@ -262,6 +268,23 @@ $result = $taskObj->arrayShift($array);
 echo "<pre>";
 print_r($result);
 exit;
+
+$array = ["red","green","blue","yellow","brown"];
+$taskObj = new Task();
+$result = $taskObj->arraySlice($array, 2);
+
+echo "<pre>";
+print_r($result);
+exit;
+
+// $fname = ['mmm', ["35", "37", ['23'], ['90', ['569', ['96']]]], ["43", "30"], ["24", "47"], ["27"]];
+// // $combineArray = [];
+// $taskObj = new Task();
+// $result = $taskObj->arrayCombine($fname);
+
+// echo "<pre>";
+// print_r($result);
+// exit;
 
 $array = ["a"=>"red","b"=>"green","c"=>"blue"];
 $taskObj = new Task();
