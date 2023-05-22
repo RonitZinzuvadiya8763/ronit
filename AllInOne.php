@@ -160,7 +160,6 @@
 <?php
 
     $myArray = array("35","37","43","30","24","47","27");
-    
     echo "Task 5.2: Upper to Lower Without Function: ";
     $arrlength = count($myArray); // 7
 
