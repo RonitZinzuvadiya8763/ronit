@@ -1,7 +1,6 @@
 <?php
 class Task
 {
-   
     function arsort($array){
         $value = array_values($array); // 3
         for ($i = 0; $i < count($value); $i++) {        // 0 < 3
