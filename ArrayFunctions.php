@@ -1,36 +1,37 @@
 <?php
 class Task
 {
-    function sort($array){
-        for($i=0; $i<count($array)-1; $i++)
-        {
-            if($array[$i] > $array[$i+1]){
-                $temp= $array[$i+1];
-                $array[$i+1]= $array[$i];
-                $array[$i]= $temp;
+    function sort($array)
+    {
+        for ($i = 0; $i < count($array) - 1; $i++) {
+            if ($array[$i] > $array[$i + 1]) {
+                $temp = $array[$i + 1];
+                $array[$i + 1] = $array[$i];
+                $array[$i] = $temp;
             }
         }
         return $array;
     }
-    function rsort($array){
-        for($i=0; $i<count($array)-1; $i++)
-        {
-            if($array[$i] < $array[$i+1]){
-                $temp= $array[$i+1];
-                $array[$i+1]= $array[$i];
-                $array[$i]= $temp;
+    function rsort($array)
+    {
+        for ($i = 0; $i < count($array) - 1; $i++) {
+            if ($array[$i] < $array[$i + 1]) {
+                $temp = $array[$i + 1];
+                $array[$i + 1] = $array[$i];
+                $array[$i] = $temp;
             }
         }
         return $array;
     }
-    function ksort($array){
-        $keys = array_keys($array); 
-        $length = count($keys);     //4
+    function ksort($array)
+    {
+        $keys = array_keys($array);
+        $length = count($keys); //4
         // return $length;
         // exit;
 
-        for ($i = 0; $i < $length - 1; $i++) {           //  0; 0 < 3; 0
-            for ($j = 0; $j < $length - $i - 1; $j++) {   //  0; 0 < 4-0-1; 0
+        for ($i = 0; $i < $length - 1; $i++) { //  0; 0 < 3; 0
+            for ($j = 0; $j < $length - $i - 1; $j++) { //  0; 0 < 4-0-1; 0
                 // echo "$length - $i - 1";
                 // exit;
                 if ($keys[$j] > $keys[$j + 1]) {
@@ -49,14 +50,15 @@ class Task
         $array = $sortedArray;
         return $array;
     }
-    function krsort($array){
+    function krsort($array)
+    {
         $keys = array_keys($array); //peter, ben ,joe
-        $length = count($keys);     //3
+        $length = count($keys); //3
         // return $length;
         // exit;
 
-        for ($i = 0; $i < $length - 1; $i++) {           //  0; 0 < 2; 0
-            for ($j = 0; $j < $length - $i - 1; $j++) {   //  0; 0 < 2-0-1; 0
+        for ($i = 0; $i < $length - 1; $i++) { //  0; 0 < 2; 0
+            for ($j = 0; $j < $length - $i - 1; $j++) { //  0; 0 < 2-0-1; 0
                 // echo "$length - $i - 1";
                 // exit;
                 if ($keys[$j] < $keys[$j + 1]) { // peter < ben
@@ -246,7 +248,6 @@ class Task
             if (in_array($value1, $array2)) { // red === red
                 $result[$key1] = $value1;
             }
-
         }
         return $result;
     }
@@ -375,7 +376,7 @@ class Task
 // print_r($result);
 // exit;
 
-$array = ["Volvo","BMW","Toyota"];
+$array = ["Volvo", "BMW", "Toyota"];
 $taskObj = new Task();
 $result = $taskObj->rsort($array);
 
@@ -383,7 +384,7 @@ echo "<pre>";
 print_r($result);
 exit;
 
-$array = ["Peter"=>"35","Ben"=>"57","Joe"=>"43"];
+$array = ["Peter" => "35", "Ben" => "57", "Joe" => "43"];
 $taskObj = new Task();
 $result = $taskObj->ksort($array);
 
@@ -391,7 +392,7 @@ echo "<pre>";
 print_r($result);
 exit;
 
-$array = ["Peter"=>"35","Ben"=>"57","Joe"=>"43"];
+$array = ["Peter" => "35", "Ben" => "57", "Joe" => "43"];
 $taskObj = new Task();
 $result = $taskObj->krsort($array);
 
