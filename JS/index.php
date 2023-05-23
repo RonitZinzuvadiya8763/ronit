@@ -17,5 +17,4 @@ Message: <input type="textarea" id="msg" name="msg"><br><br>
     document.getElementById("demo").innerHTML = 'Name: ' +  name + '<br>' + 'Phone: ' + phone + '<br>' + 'Message: ' + msg;
   }
 </script>
-
 </html>
