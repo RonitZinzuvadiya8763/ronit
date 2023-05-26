@@ -326,10 +326,15 @@ class Task
     }
     function pop($array)
     {
-        $popIndex = (count($array) - 1);
+        $lastKey = count($array) - 1;
+        $newArray = [];
 
-        array_splice($array, $popIndex, 1);
-        return $array;
+        foreach ($array as $key => $value) {
+            if ($key !== $lastKey) {
+                $newArray[$key] = $value;
+            }
+        }
+        return $newArray;
     }
     function product($array)
     {
@@ -369,6 +374,13 @@ class Task
     }
 }
 
+$array = ["red", "green", "blue", "masti", "hello", "ronit"];
+$taskObj = new Task();
+$result = $taskObj->pop($array);
+
+echo '<pre>';
+print_r($result);
+exit;
 // $array = ["Volvo","BMW","Toyota"];
 // $taskObj = new Task();
 // $result = $taskObj->sort($array);
