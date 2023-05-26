@@ -17,7 +17,7 @@ Message: <input type="textarea" id="msg" name="msg"><br><br>
 <script>
 // console.log("hi");
 // exit;
-document.getElementById("demo").innerHTML = "Hello World!";
+  document.getElementById("demo").innerHTML = "Hello World!";
   // var surname = 'hello';
   // function getName() {
   //   let name = "ABC";
@@ -29,7 +29,6 @@ document.getElementById("demo").innerHTML = "Hello World!";
   // // debugger
   // // display in sources
   // console.log(surname);
-
 
 </script>
 
