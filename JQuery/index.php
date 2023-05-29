@@ -200,7 +200,7 @@
 
 </body> -->
 
-<body>
+<!-- <body>
 
     <div id="div1">
         <h2>Let jQuery AJAX Change This Text</h2>
@@ -208,6 +208,14 @@
 
     <button>Get External Content</button>
 
+</body> -->
+
+
+<!-- Topic: JQuery Get/Post -->
+
+<body>
+    <!-- <button>Send an HTTP GET request to a page and get the result back</button> -->
+    <button>Send an HTTP POST request to a page and get the result back</button>
 </body>
 
 </html>

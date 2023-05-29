@@ -129,13 +129,39 @@
 //   // });
 // });
 
+// $(document).ready(function(){
+//   $("button").click(function(){
+//     $("#div1").load("demo_test.html", function(responseTxt, statusTxt, xhr){
+//       if(statusTxt == "success")
+//         alert("External content loaded successfully!");
+//       if(statusTxt == "error")
+//         alert("Error: " + xhr.status + ": " + xhr.statusText);
+//     });
+//   });
+// });
+
+
+// Topic: JQuery Get/Post
+// Get
+// $(document).ready(function(){
+//   $("button").click(function(){
+//     $.get("demo_test.html", function(data, status){
+//       alert("Data: " + data + "\nStatus: " + status);
+//     });
+//   });
+// });
+
+//Post
 $(document).ready(function(){
   $("button").click(function(){
-    $("#div1").load("demo_test.html", function(responseTxt, statusTxt, xhr){
-      if(statusTxt == "success")
-        alert("External content loaded successfully!");
-      if(statusTxt == "error")
-        alert("Error: " + xhr.status + ": " + xhr.statusText);
+    $.post("demo_test.php",
+    {
+      name: "Donald Duck",
+      city: "Duckburg"
+    },
+    function(data,status){
+      console.log(data);
+      alert("Data: " + data + "\nStatus: " + status);
     });
   });
 });
