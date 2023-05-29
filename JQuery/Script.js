@@ -86,14 +86,14 @@
 
 // parent() Method: returns the direct parent element of the selected element.
 // $(document).ready(function(){
-  //   $("span").parent().css({"color": "red", "border": "2px solid red"});
-  // });
-  
+//   $("span").parent().css({"color": "red", "border": "2px solid red"});
+// });
+
 // parents() Method: returns all ancestor elements of the selected element, all the way up to the document's root element (<html>).
 // $(document).ready(function(){
-  //   $("span").parents().css({"color": "red", "border": "2px solid red"});
-  // });
-  
+//   $("span").parents().css({"color": "red", "border": "2px solid red"});
+// });
+
 // parentsUntil() Method: returns all ancestor elements between two given arguments.
 // $(document).ready(function(){
 //   $("span").parentsUntil("div").css({"color": "red", "border": "2px solid red"});
@@ -167,9 +167,29 @@
 // });
 
 // Topic: JQuery - The noConflict() Method
-$.noConflict();
-jQuery(document).ready(function($){
-  $("button").click(function(){
-    $("p").text("jQuery is still working!");
+// $.noConflict();
+// jQuery(document).ready(function($){
+//   $("button").click(function(){
+//     $("p").text("jQuery is still working!");
+//   });
+// });
+
+// Topic: JQuery Filers (Filter Tables)
+// $(document).ready(function () {
+//   $("#myInput").on("keyup", function () {
+//     var value = $(this).val().toLowerCase();
+//     $("#myTable tr").filter(function () {
+//       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+//     });
+//   });
+// });
+
+// Topic: JQuery Filers (Filter Lists)
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myList li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
   });
 });
