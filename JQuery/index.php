@@ -213,9 +213,16 @@
 
 <!-- Topic: JQuery Get/Post -->
 
+<!-- <body> -->
+<!-- <button>Send an HTTP GET request to a page and get the result back</button> -->
+<!-- <button>Send an HTTP POST request to a page and get the result back</button>
+</body> -->
+
+
+<!-- Topic: JQuery - The noConflict() Method -->
 <body>
-    <!-- <button>Send an HTTP GET request to a page and get the result back</button> -->
-    <button>Send an HTTP POST request to a page and get the result back</button>
+    <p>This is a paragraph.</p>
+    <button>Test jQuery</button>
 </body>
 
 </html>

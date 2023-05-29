@@ -152,16 +152,24 @@
 // });
 
 //Post
-$(document).ready(function(){
+// $(document).ready(function(){
+//   $("button").click(function(){
+//     $.post("demo_test.php",
+//     {
+//       name: "Donald Duck",
+//       city: "Duckburg"
+//     },
+//     function(data,status){
+//       console.log(data);
+//       alert("Data: " + data + "\nStatus: " + status);
+//     });
+//   });
+// });
+
+// Topic: JQuery - The noConflict() Method
+$.noConflict();
+jQuery(document).ready(function($){
   $("button").click(function(){
-    $.post("demo_test.php",
-    {
-      name: "Donald Duck",
-      city: "Duckburg"
-    },
-    function(data,status){
-      console.log(data);
-      alert("Data: " + data + "\nStatus: " + status);
-    });
+    $("p").text("jQuery is still working!");
   });
 });
