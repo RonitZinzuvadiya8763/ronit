@@ -153,19 +153,19 @@
 <!-- <body> -->
 
 <!-- <div class="descendants" style="width:500px;">div (current element) -->
-  <!-- <p>p (child)
+<!-- <p>p (child)
     <span>span (grandchild)</span>   
   </p>
   <p>p (child)
     <span>span (grandchild)</span>
   </p>  -->
-  <!-- <p class="first">p (child)
+<!-- <p class="first">p (child)
     <span>span (grandchild)</span>   
   </p>
   <p class="second">p (child)
     <span>span (grandchild)</span>
   </p>  -->
-  <!-- <p>p (child)
+<!-- <p>p (child)
     <span>span (grandchild)</span>   
   </p>
   <p>p (child)
@@ -186,6 +186,28 @@
 <!-- </body> -->
 
 
+<!-- Topic: JQuery AJAX -->
+<!-- Topic: JQuery Load -->
 
+<!-- <body>
+
+    <div id="div1">
+        <h2>Let jQuery AJAX Change This Text</h2>
+    </div>
+
+    <button style="color:blue;">Get External Content</button>
+    <button id="btn2">Get External Content</button>
+
+</body> -->
+
+<body>
+
+    <div id="div1">
+        <h2>Let jQuery AJAX Change This Text</h2>
+    </div>
+
+    <button>Get External Content</button>
+
+</body>
 
 </html>

@@ -115,3 +115,27 @@
 // $(document).ready(function(){
 //   $("div").find("span").css({"color": "red", "border": "2px solid red"});
 // });
+
+
+// Topic: JQuery Load
+
+// $(document).ready(function(){
+//   // $("button").click(function(){
+//   //   $("#div1").load("demo_test.html");
+//   // });
+
+//   // $("#btn2").click(function(){
+//   //   $("#div1").load("demo_test.html #p1");
+//   // });
+// });
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").load("demo_test.html", function(responseTxt, statusTxt, xhr){
+      if(statusTxt == "success")
+        alert("External content loaded successfully!");
+      if(statusTxt == "error")
+        alert("Error: " + xhr.status + ": " + xhr.statusText);
+    });
+  });
+});
