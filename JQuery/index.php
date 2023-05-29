@@ -66,7 +66,7 @@
 </style> -->
 
 
-<h2>This is a heading</h2>
+<!-- <h2>This is a heading</h2>
 
 <p style="background-color:#ff0000">This is a paragraph.</p>
 <p style="background-color:#00ff00">This is a paragraph.</p>
@@ -74,6 +74,118 @@
 
 <p>This is a paragraph.</p>
 
-<button>Set background-color of p</button>
+<button>Set background-color of p</button> -->
+
+
+<!-- Topic: JQuery Dimensions -->
+<!-- <style>
+    #div1 {
+        height: 200px;
+        width: 300px;
+        padding: 10px;
+        margin: 3px;
+        border: 1px solid blue;
+        background-color: lightblue;
+    }
+</style>
+
+<body>
+    <div id="div1"></div>
+    <br>
+
+    <button>Display dimensions of div</button>
+    <button id = "resize">Resize div</button>
+    
+    <p>width() - returns the width of an element.</p>
+    <p>height() - returns the height of an element.</p>
+    <p>innerWidth() - returns the width of an element (includes padding).</p>
+    <p>innerHeight() - returns the height of an element (includes padding).</p>
+    <p>outerWidth() - returns the width of an element (includes padding and border).</p>
+    <p>outerHeight() - returns the height of an element (includes padding and border).</p>
+    <p>outerWidth(true) - returns the width of an element (includes padding, border, and margin).</p>
+    <p>outerHeight(true) - returns the height of an element (includes padding, border, and margin).</p>
+    <p>sets the width and height of a specified &lt;div&gt; element </p>
+</body> -->
+
+
+<!-- Topic: JQuery Traversing - Ancestors-->
+<!-- <style>
+    .ancestors * {
+        display: block;
+        border: 2px solid black;
+        color: black;
+        padding: 5px;
+        margin: 15px;
+    }
+</style>
+
+<body>
+    <h3 style="color:dimgray">An ancestor is a parent, grandparent, great-grandparent, and so on.</h3>
+    <div class="ancestors">
+        <div style="width:500px;">div (great-grandparent)
+            <ul>ul (grandparent)
+                <li>li (direct parent)
+                    <span>span</span>
+                </li>
+            </ul>
+        </div>
+
+        <div style="width:500px;">div (grandparent)
+            <p>p (direct parent)
+                <span>span</span>
+            </p>
+        </div>
+    </div>
+</body> -->
+
+
+<!-- Topic: JQuery Traversing - Descendants
+<style>
+.descendants * { 
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+</style> -->
+
+<!-- <body> -->
+
+<!-- <div class="descendants" style="width:500px;">div (current element) -->
+  <!-- <p>p (child)
+    <span>span (grandchild)</span>   
+  </p>
+  <p>p (child)
+    <span>span (grandchild)</span>
+  </p>  -->
+  <!-- <p class="first">p (child)
+    <span>span (grandchild)</span>   
+  </p>
+  <p class="second">p (child)
+    <span>span (grandchild)</span>
+  </p>  -->
+  <!-- <p>p (child)
+    <span>span (grandchild)</span>   
+  </p>
+  <p>p (child)
+    <span>span (grandchild)</span>
+  </p> -->
+<!-- </div> -->
+
+
+<!-- <div class="descendants" style="width:500px;">div (current element) 
+  <p>p (child)
+    <span>span (grandchild)</span>   
+  </p>
+  <p>p (child)
+    <span>span (grandchild)</span>
+  </p> 
+</div> -->
+
+<!-- </body> -->
+
+
+
 
 </html>
