@@ -196,6 +196,7 @@
 
 
 // Topic: Calculator
+
 $(document).ready(function () {
   $(".numBtn").click(function () {
     var value1 = $(this).val();
@@ -205,6 +206,12 @@ $(document).ready(function () {
   
   $(".clrBtn").click(function () {
     $("#input").val("");
+  });
+  
+  $(".delBtn").click(function del() {
+    var num = document.getElementById("input").value;
+    var stripped = num / 10 | 0;
+    $("#input").val(stripped);
   });
 
   $(".opBtn").click(function () {
