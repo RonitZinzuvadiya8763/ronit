@@ -384,6 +384,19 @@
         color: black;
     }
 
+    .delBtn{
+        background-color: red;
+        color: white;
+        font-size: 18px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+    }
+
+    .delBtn:hover {
+        color: black;
+    }
+
     .numtxt {
         background-color: grey;
         color: white;
@@ -400,7 +413,7 @@
 
     h1 {
         color: slategrey;
-        padding-left: 580px;
+        padding-left: 650px;
     }
 
     /* remove up/down arrow from input screen */
@@ -424,6 +437,7 @@
                 <!-- <td><button class="numBtn" id="8" value="8">8</button></td>
                 <td><button class="numBtn" id="9" value="9">9</button></td> -->
                 <td><button class="clrBtn" id="cancle" value="c">AC</button></td>
+                <td><button class="delBtn" id="del" value="del" onclick="del()">DEL</button></td>
                 <!-- <td><button class="opBtn" id="div" value="/">/</button></td> -->
             </tr>
             <tr>
@@ -461,6 +475,7 @@
                 <!-- <td><button class="opBtn" id="sub" value="-">-</button></td> -->
             </tr>
             <tr>
+                <td><button class="numBtn" id="00" value="00">00</button></td>
                 <td><button class="numBtn" id="0" value="0">0</button></td>
                 <td><button class="numBtn" id="." value=".">.</button></td>
                 <!-- <td><button class="numBtn" id="1" value="1">1</button></td>
