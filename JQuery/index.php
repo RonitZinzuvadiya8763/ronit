@@ -290,6 +290,7 @@
 
 </body> -->
 
+<!-- Topic: JQuery Filers (Filter Lists)  -->
 
 <!-- Topic: JQuery Filers (Filter Lists)  -->
 
@@ -300,6 +301,7 @@
     <input id="myInput" type="text" placeholder="Search..">
     <br>
 
+    
     <ul id="myList">
         <li>First item</li>
         <li>Second item</li>
