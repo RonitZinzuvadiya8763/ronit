@@ -56,5 +56,14 @@ $(document).ready(function () {
       $(".calBtn").trigger('click');
     }
   });
+  
+  $('#input').on('input', function () {
+    var value = $(this).val();
+    var regex = /^[0-9+\-*/.]+$/; //allow numbers and arithmetic operators
+
+    if (!regex.test(value)) {
+      $(this).val(value.replace(/[^0-9+\-*/.]/g, '')); // Remove invalid characters
+    }
+  });
 
 });
