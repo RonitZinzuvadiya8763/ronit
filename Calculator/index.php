@@ -127,7 +127,10 @@
     <div class="mycalculator">
         <table>
             <tr>
-                <td colspan="3"><input type="varchar" class="numtxt" id="input" autofocus="autofocus"></td>
+                <td colspan="3">
+                    <input type="varchar" class="numtxt" id="input" autofocus="autofocus"
+                        autocomplete="off">
+                </td>
             </tr>
             <tr>
                 <td><button class="clrBtn" id="cancle" value="c">AC</button></td>
@@ -158,7 +161,6 @@
                 <td><button class="numBtn" id="0" value="0">0</button></td>
                 <td><button class="numBtn" id="." value=".">.</button></td>
             </tr>
-
             <tr>
                 <td colspan="3"><button class="calBtn" id="calculate" value="=">=</button></td>
             </tr>
