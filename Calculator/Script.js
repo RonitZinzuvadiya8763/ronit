@@ -27,13 +27,15 @@ $(document).ready(function () {
     }
     else {
       let result = eval($("#input").val());
-      $("#input").val(result);
+      $("#input").val(result).focus();
     }
   });
 
   $(document).on('keypress', function (e) {
     e.preventDefault();
     var value = $(this).val();
+
+    
     if (e.which >= '42' && e.which <= "57") {
       e.originalEvent.key
       $('#input').val(
