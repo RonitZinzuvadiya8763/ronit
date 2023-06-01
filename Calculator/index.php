@@ -128,8 +128,7 @@
         <table>
             <tr>
                 <td colspan="3">
-                    <input type="varchar" class="numtxt" id="input" autofocus="autofocus"
-                        autocomplete="off">
+                    <input type="varchar" class="numtxt" id="input" autofocus="autofocus" autocomplete="off">
                 </td>
             </tr>
             <tr>
