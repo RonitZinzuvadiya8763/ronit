@@ -159,7 +159,7 @@
             </tr>
             <tr>
                 <td><button class="numBtn" id="0" value="0">0</button></td>
-                <td><button class="numBtn" id="." value=".">.</button></td>
+                <!-- <td><button class="numBtn" id="." value=".">.</button></td> -->
             </tr>
             <tr>
                 <td colspan="3"><button class="calBtn" id="calculate" value="=">=</button></td>
