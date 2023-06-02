@@ -57,7 +57,5 @@ $(document).ready(function () {
         $(".calBtn").trigger('click');
       }
     }
-
   });
-
 });
