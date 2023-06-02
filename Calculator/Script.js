@@ -35,7 +35,7 @@ $(document).ready(function () {
     e.preventDefault();
     var value = $(this).val();
 
-    
+
     if (e.which >= '42' && e.which <= "57") {
       e.originalEvent.key
       $('#input').val(
