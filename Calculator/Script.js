@@ -43,8 +43,15 @@ $(document).ready(function () {
       );
     }
 
+
+
+    
     if (e.which == 13) {
       $arithmaticChecker = $("#input").val()[$("#input").val().length - 1];
+
+      // $(".numtxt").parseInt.val();
+      
+
       if (
         ($arithmaticChecker == '+') ||
         ($arithmaticChecker == '-') ||
@@ -59,3 +66,5 @@ $(document).ready(function () {
     }
   });
 });
+
+
