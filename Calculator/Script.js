@@ -1,8 +1,34 @@
 $(document).ready(function () {
-  $(".numBtn, .opBtn").click(function () {
+  var operators = ['+', '-', '*', '/'];
+  var operator = '';
+
+  $(".numBtn").click(function () {
     var value1 = $(this).val();
     var value2 = $("#input").val();
+    let arithmaticCheckerInvalidInput = $("#input").val()[$("#input").val().length - 1];
+
     $("#input").val(value2 + value1).focus();
+
+    // var enableOperator = $("#input").val()[$("#input").val().length];
+    // console.log(enableOperator);
+    
+    //var disableOperator = $("#input").val()[$("#input").val().length - 1];
+    // debugger;
+
+    if (operators.includes(arithmaticCheckerInvalidInput)) {
+      $(".opBtn").attr('disabled', 'disabled');
+    }
+  });
+
+  $(".opBtn").click(function () {
+    var value1 = $(this).val();
+    var value2 = $("#input").val();
+    operator = value1;
+    $("#input").val(value2 + value1).focus();
+
+    // let checker = $("#input").val()[$("#input").val().length - 1];
+    // console.log(checker);
+    
   });
 
   $(".clrBtn").click(function () {
@@ -12,29 +38,54 @@ $(document).ready(function () {
   $(".delBtn").click(function () {
     let num = $("#input").val();
     num = num.substring(0, num.length - 1);
-    $("#input").val(num);
+    $("#input").val(num).focus();
   });
 
   $(".calBtn").click(function () {
-    $arithmaticChecker = $("#input").val()[$("#input").val().length - 1];
-    if (
-      ($arithmaticChecker == '+') ||
-      ($arithmaticChecker == '-') ||
-      ($arithmaticChecker == '*') ||
-      ($arithmaticChecker == '/')
-    ) {
+    $(".opBtn").removeAttr('disabled', 'disabled');
+    let arithmaticCheckerInvalidInput = $("#input").val()[$("#input").val().length - 1];
+    let arithmaticChecker = $("#input").val();
+
+    if (operators.includes(arithmaticCheckerInvalidInput)) {
       window.alert("Can not use operator in the ending !!!");
+      return false;
     }
-    else {
-      let result = eval($("#input").val());
-      $("#input").val(result).focus();
+    var arithmaticCheckerValues = arithmaticChecker.split(/[-+*/]/);
+    console.log(arithmaticCheckerValues);
+
+    switch (operator) {
+      case '+':
+        var finalOutput = parseInt(arithmaticCheckerValues[0]) + parseInt(arithmaticCheckerValues[1]);
+        break;
+
+      case '-':
+        var finalOutput = parseInt(arithmaticCheckerValues[0]) - parseInt(arithmaticCheckerValues[1]);
+        break;
+
+      case '*':
+        var finalOutput = parseInt(arithmaticCheckerValues[0]) * parseInt(arithmaticCheckerValues[1]);
+        break;
+
+      case '/':
+        var finalOutput = parseInt(arithmaticCheckerValues[0]) / parseInt(arithmaticCheckerValues[1]);
+        break;
+    }
+
+    $('#input').val(finalOutput);
+
+    let result = eval_calculation();
+    $("#input").val(result).focus();
+    $('#input').removeAttr('disabled');
+
+    function eval_calculation() {
+      console.log($("#input").val());
+      return $("#input").val();
     }
   });
 
   $(document).on('keypress', function (e) {
     e.preventDefault();
     var value = $(this).val();
-
 
     if (e.which >= '42' && e.which <= "57") {
       e.originalEvent.key
@@ -43,28 +94,8 @@ $(document).ready(function () {
       );
     }
 
-
-
-    
     if (e.which == 13) {
-      $arithmaticChecker = $("#input").val()[$("#input").val().length - 1];
-
-      // $(".numtxt").parseInt.val();
-      
-
-      if (
-        ($arithmaticChecker == '+') ||
-        ($arithmaticChecker == '-') ||
-        ($arithmaticChecker == '*') ||
-        ($arithmaticChecker == '/')
-      ) {
-        window.alert("Can not use operator in the ending !!!");
-      }
-      else {
-        $(".calBtn").trigger('click');
-      }
+      $(".calBtn").trigger('click');
     }
   });
 });
-
-
