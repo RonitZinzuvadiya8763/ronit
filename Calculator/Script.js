@@ -9,6 +9,7 @@ $(document).ready(function () {
 
     $("#input").val(value2 + value1).focus();
 
+    
     // var enableOperator = $("#input").val()[$("#input").val().length];
     // console.log(enableOperator);
     
