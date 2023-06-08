@@ -1,201 +1,196 @@
 <html lang="en">
-    <head>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.3/jquery.min.js">
-        </script>
-        <title>HTML Form</title>
-    </head>
 
-    <style>
-        .mydata {
-            font-weight: bold;
-        }
-        .error {
-            outline: 1px solid red;
-        }
-        .errormsg{
-            color: red;
-        }
-        #myform {
-            padding-left: 50px;
-        }
-        h1 {
-            padding-left: 50px;
-        }
-        input[type=text]:focus {
-            /* border-width: 1px; */
-            border: 1px solid #555;
-        }
-        #preview p {
-            padding-left: 50px;
-        }
-        .btn {
-            width: 200px;
-            height: 50px;
-            background-color: black;
-            color: white;
-        }
-        .btn:hover {
-            background-color: green;
-            color: white;
-        }
-        .hide{
-            display: none;
-        }
-    </style>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+    <title>HTML Form</title>
+</head>
 
-    <body>
-        <h1>Registration Form</h1>
+<style>
+    .mydata {
+        font-weight: bold;
+    }
 
-        <form type="GET" id="myForm">
-            First Name: </p><input type="text" class="myInput" name="fname" id="fname"
-                style="width: 50%; height: 30px;">
-            <span class="errormsg hide">First Name is Required!</span><br><br>
+    .error {
+        outline: 1px solid red;
+    }
 
-            Last Name: </p><input type="text" class="myInput" name="lname" id="lname"
-                style="width: 50%; height: 30px;">
-            <span class="errormsg hide">Last Name is Required!</span><br><br>
+    .errormsg {
+        color: red;
+    }
 
-            Email: </p><input type="text" class="myInput" name="email" id="email" style="width: 50%; height: 30px;">
-            <span class="errormsg hide">Email is Required!</span><br><br>
+    #myform {
+        padding-left: 50px;
+    }
 
-            Phone: </p><input type="number" class="myInput" name="phone" id="phone"
-                style="width: 50%; height: 30px;">
-            <span class="errormsg hide">Phone is Required!</span><br><br>
+    h1 {
+        padding-left: 50px;
+    }
 
-            Gender: </p><input class="gender" type="radio" id="gender" class="myInput" name="gender" value="male" checked>            
-            <label for="male">Male</label>
-            <input class="gender" type="radio" id="gender" class="myInput" name="gender" value="female">
-            <label for="female">Female</label><br><br>
+    h2 {
+        padding-left: 50px;
+        text-align: center;
+        color: Grey;
+    }
 
-            Hobby: </p>
-            <input type="checkbox" id="hobby" class="myInput" name="hobby1" value="Cricket">
-            <label for="vehicle1">Cricket</label>
-            <input type="checkbox" id="hobby" class="myInput" name="hobby2" value="VollyBall">
-            <label for="vehicle2">VollyBall</label>
-            <input type="checkbox" id="hobby" class="myInput" name="hobby3" value="Golf">
-            <label for="vehicle3">Golf</label><br><br>
+    input[type=text]:focus {
+        border: 1px solid #555;
+    }
 
-            Address: </p>
-            <textarea id="address" class="myInput" name="address" style="width: 50%; height: 100px;"></textarea><br><br>
-            <span class="errormsg hide">Address is Required!</span><br><br>
+    .btn {
+        width: 200px;
+        height: 50px;
+        background-color: black;
+        color: white;
+    }
 
-            <div class="container">
-                <div class="vertical-center">
-                    <button id="submit" class="btn">Submit</button>
-                </div>
+    .btn:hover {
+        background-color: green;
+        color: white;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    table {
+        border-collapse: collapse;
+        height: 200px;
+        width: 20px;
+    }
+
+    th,
+    td {
+        border: 1px solid black;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <h1>Emloyee Registration Form</h1>
+
+    <form type="GET" id="myForm">
+        First Name: </p><input type="text" class="myInput" name="fname" id="fname" style="width: 50%; height: 30px;">
+        <span id="fnanmeerrormessage" class="errormsg hide">First Name is Required!</span><br><br>
+
+        Last Name: </p><input type="text" class="myInput" name="lname" id="lname" style="width: 50%; height: 30px;">
+        <span id="lnameerrormessage" class="errormsg hide">Last Name is Required!</span><br><br>
+
+        Email: </p><input type="text" class="myInput" name="email" id="email" style="width: 50%; height: 30px;">
+        <span id="emailerrormessage" class="errormsg hide">Email is Required!</span><br><br>
+
+        Phone: </p><input type="number" class="myInput" name="phone" id="phone" style="width: 50%; height: 30px;">
+        <span id="phoneerrormessage" class="errormsg hide">Phone is Required!</span><br><br>
+
+        Gender: </p><input class="gender" type="radio" id="gender" class="myInput" name="gender" value="Male" checked>
+        <label for="male">Male</label>
+        <input class="gender" type="radio" id="gender" class="myInput" name="gender" value="Female">
+        <label for="female">Female</label><br><br>
+
+        Hobby: </p>
+        <input type="checkbox" id="hobby" class="myInput hobby" name="hobby1" value="Cricket">
+        <label for="vehicle1">Cricket</label>
+        <input type="checkbox" id="hobby" class="myInput hobby" name="hobby2" value="VollyBall">
+        <label for="vehicle2">VollyBall</label>
+        <input type="checkbox" id="hobby" class="myInput hobby" name="hobby3" value="Golf">
+        <label for="vehicle3">Golf</label><br><br>
+
+        Address: </p>
+        <textarea id="address" class="myInput" name="address" style="width: 50%; height: 100px;"></textarea><br><br>
+        <span id="addresserrormessage" class="errormsg hide">Address is Required!</span><br><br>
+
+        <div class="container">
+            <div class="vertical-center">
+                <button id="submit" class="btn">Submit</button>
             </div>
-        </form>
-
-        <div id="preview">
-            <h1>Your Inserted Data </h1>
-            <p>First Name: <b id="fname_b" class="mydata"></b>
-            <p>Last Name: <b id="lname_b" class="mydata"></b>
-            <p>Email: <b id="email_b" class="mydata"></b>
-            <p>Phone: <b id="phone_b" class="mydata"></b>
-            <p>Gender: <b id="gender_b" class="mydata"></b>
-            <p>Hobby: <b id="hobby_b" class="mydata"></b>
-            <p>Address: <b id="address_b" class="mydata"></b>
         </div>
+    </form>
 
-        <script>
-            $(document).ready(function () {
-                
-                $("#preview").hide();
+    <h2>Emloyee Data</h2>
 
-                $("#submit").click(function (e) {
-                    $("#fname, #lname, #email, #phone, #address").removeClass('error');
-                    $(span).removeClass('hide');
+    <table style="width:100%" id="table">
+        <tbody id="tbody">
+            <td>Firstname</td>
+            <td>Lastname</td>
+            <td>Email</td>
+            <td>Phone</td>
+            <td>Gender</td>
+            <td>Hobby</td>
+            <td>Address</td>
+        </tbody>
+    </table>
 
-                    fname = $('#fname').val();
-                    lname = $('#lname').val();
-                    email = $('#email').val();
-                    phone = $('#phone').val();
-                    gender = $(".gender:checked").val();
-                    hobby = hobby_value;
-                    address = $('#address').val();
-                    message = "";
+    <script>
+        $(document).ready(function () {
 
-                    if (fname == "") {
-                        $("#fname").addClass('error');
-                        message += "Please Enter First Name\n";
+            $(document).on('click', '#submit', function (e) {
+                e.preventDefault();
+                $("#fname, #lname, #email, #phone, #address").removeClass('error');
+                $("#fnanmeerrormessage, #lnameerrormessage, #emailerrormessage, #phoneerrormessage, #addresserrormessage").addClass("hide");
+
+                var fname = $('#fname').val();
+                var lname = $('#lname').val();
+                var email = $('#email').val();
+                var phone = $('#phone').val();
+                var gender = $(".gender:checked").val();
+                var hobby = '';
+                var address = $('#address').val();
+                var is_error = false;
+
+                if (fname == "") {
+                    $("#fname").addClass('error');
+                    $('#fnanmeerrormessage').removeClass('hide');
+                    is_error = true;
+                }
+                if (lname == "") {
+                    $("#lname").addClass('error');
+                    $('#lnameerrormessage').removeClass('hide');
+                    is_error = true;
+                }
+                if (email == "") {
+                    $("#email").addClass('error');
+                    $('#emailerrormessage').removeClass('hide');
+                    is_error = true;
+                }
+                if (phone == "") {
+                    $("#phone").addClass('error');
+                    $('#phoneerrormessage').removeClass('hide');
+                    is_error = true;
+                }
+
+                if (address == "") {
+                    $("#address").addClass('error');
+                    $('#addresserrormessage').removeClass('hide');
+                    is_error = true;
+                }
+
+                if (is_error) {
+                    return false;
+                }
+
+                var hobby = '';
+                $('.hobby:checked').each(function (i, v) {
+                    if (hobby == '') {
+                        hobby = $(v).val();
+                    } else {
+                        hobby = hobby + ', ' + $(v).val();
                     }
-                    if (lname == "") {
-                        $("#lname").addClass('error');
-                        message += "Please Enter Last Name\n";
-                    }
-                    if (email == "") {
-                        $("#email").addClass('error');
-                        message += "Please Enter Email\n";
-                    }
-                    if (phone == "") {
-                        $("#phone").addClass('error');
-                        message += "Please Enter Phone\n";
-                    }
-                    if (gender == "") {
-                        $("#gender").addClass('error');
-                        message += "Please Enter Gender\n";
-                    }
-                    if (hobby == "") {
-                        $("#hobby").addClass('error');
-                        message += "Please Enter Hobby\n";
-                    }
-                    if (address == "") {
-                        $("#address").addClass('error');
-                        message += "Please Enter Address\n";
-                    }
-                    if (fname != "" && lname != "" && email != "" && phone != "" && gender != "" && hobby != "" && address != "") {
-                        message += "Form Submitted!!";
-                        $("#preview").show();
-                    }
-                    e.preventDefault();
-                    var hobby_value = '';
-
-                    $('.hobby:checked').each(function (i, v) {
-                        if (hobby_value != '') {
-                            hobby_value = hobby_value + ', ' + $(v).val();
-                        } else {
-                            hobby_value = $(v).val();
-                        }
-                    });
-
-                    fname = $('#fname').val();
-                    lname = $('#lname').val();
-                    email = $('#email').val();
-                    phone = $('#phone').val();
-                    gender = $(".gender:checked").val();
-                    hobby = hobby_value;
-                    address = $('#address').val();
-
-                    $("#fname_b").html(fname);
-                    $("#lname_b").html(lname);
-                    $("#email_b").html(email);
-                    $("#phone_b").html(phone);
-                    $("#gender_b").html(gender);
-                    $("#hobby_b").html(hobby);
-                    $("#address_b").html(address);
-
-                    myfname = $('#fname').val();
-                    myfnamedata = $('#fname_b').val(myfname);
-
-                    mylname = $('#lname').val();
-                    mylnamedata = $('#lname_b').val(mylname);
-
-                    myemail = $('#email').val();
-                    myemaildata = $('#email_b').val(myemail);
-
-                    myphone = $('#phone').val();
-                    myphonedata = $('#phone_b').val(myphone);
-
-                    mygender = $('#gender').val();
-                    mygenderdata = $('#gender_b').val(mygender);
-
-                    myhobby = $('#hobby').val();
-                    myhobbydata = $('#hobby_b').val(myhobby);
-
-                    myaddress = $('#address').val();
-                    myaddressdata = $('#address_b').val(myaddress);
                 });
+
+                if (fname != "" && lname != "" && email != "" && phone != "" && gender != "" && address != "") {
+                    $('#tbody').append(`<tr>
+                        <td>`+ fname + `</td>
+                        <td>`+ lname + `</td>
+                        <td>`+ email + `</td>
+                        <td>`+ phone + `</td>
+                        <td>`+ gender + `</td>
+                        <td>`+ hobby + `</td>
+                        <td>`+ address + `</td>
+                    </tr>`);
+                }
             });
-        </script>
-    </body>
+        });
+    </script>
+</body>
+
 </html>
