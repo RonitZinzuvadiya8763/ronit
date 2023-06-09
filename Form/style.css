@@ -1,0 +1,76 @@
+.mydata {
+    font-weight: bold;
+}
+
+.error {
+    outline: 1px solid red;
+}
+
+.errormsg {
+    color: red;
+}
+
+#myform {
+    padding-left: 50px;
+}
+
+h1 {
+    text-align: center;
+    color: Grey;
+}
+
+h2 {
+    text-align: center;
+    color: Grey;
+}
+
+input[type=text]:focus {
+    border: 1px solid #555;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#submit {
+    width: 200px;
+    height: 50px;
+    background-color: black;
+    color: white;
+}
+
+#submit:hover {
+    background-color: green;
+    color: white;
+}
+
+#reset {
+    width: 200px;
+    height: 50px;
+    padding-left: 10px;
+    background-color: black;
+    color: white;
+}
+
+#reset:hover {
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+
+.hide {
+    display: none;
+}
+
+table {
+    border-collapse: collapse;
+    height: 200px;
+    width: 20px;
+}
+
+th,
+td {
+    border: 1px solid black;
+    text-align: center;
+}
