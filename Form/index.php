@@ -13,36 +13,36 @@
     <h1>Employee Registration Form</h1>
 
     <form type="GET" id="myForm">
-        First Name: </p><input type="text" class="myInput" name="fname" id="fname" style="width: 50%; height: 30px;" autofocus="autofocus">
+        First Name: </p><input type="text" class="myInput" name="fname" id="fname" style="width: 50%; height: 30px;" autofocus="autofocus" >
         <span id="fnanmeerrormessage" class="errormsg hide">First Name is Required!</span><br><br>
 
-        Last Name: </p><input type="text" class="myInput" name="lname" id="lname" style="width: 50%; height: 30px;">
+        Last Name: </p><input type="text" class="myInput" name="lname" id="lname" style="width: 50%; height: 30px;" >
         <span id="lnameerrormessage" class="errormsg hide">Last Name is Required!</span><br><br>
 
-        Email: </p><input type="text" class="myInput" name="email" id="email" style="width: 50%; height: 30px;">
-        <span id="emailerrormessage" class="errormsg hide">Email is Required!</span><br><br>
+        Email: </p><input type="text" class="myInput" name="email" id="email" style="width: 50%; height: 30px;" >
+        <span id="emailerrormessage" class="errormsg hide">Email is Required!</span>
+        <span id="emailInvalid" class="errormsg hide">Invalid Email!</span><br><br>
 
-        Phone: </p><input type="number" class="myInput mobile-valid" name="phone" id="phone" style="width: 50%; height: 30px;">
-        <span id="phoneerrormessage" class="errormsg hide">Correct Phone Number is Required!</span>
+        Phone: </p><input type="number" class="myInput mobile-valid" name="phone" id="phone" style="width: 50%; height: 30px;" >
+        <span id="phoneerrormessage" class="errormsg hide">Phone Number is Required!</span>
         <!-- <span id="mobile-valid"><i class="errormsg"></i>Valid Mobile No</span>  -->
-        <span id="mobile-invalid" class="errormsg hide">Invalid mobile No</span>
-        <br><br>
+        <span id="mobileInvalid" class="errormsg hide">Invalid Mobile No</span><br><br>
 
-        Gender: </p><input class="gender" type="radio" id="gender1" class="myInput" name="gender" value="Male" checked>
+        Gender: </p><input class="gender" type="radio" id="gender1" class="myInput" name="gender" value="Male"  checked>
         <label for="male">Male</label>
         <input class="gender" type="radio" id="gender2" class="myInput" name="gender" value="Female">
         <label for="female">Female</label><br><br>
 
         Hobby: </p>
-        <input type="checkbox" id="hobby" class="myInput hobby" name="hobby1" value="Cricket">
+        <input type="checkbox" id="hobby" class="myInput hobby" name="hobby1" value="Cricket" >
         <label for="vehicle1">Cricket</label>
-        <input type="checkbox" id="hobby" class="myInput hobby" name="hobby2" value="VollyBall">
+        <input type="checkbox" id="hobby" class="myInput hobby" name="hobby2" value="VollyBall" >
         <label for="vehicle2">VollyBall</label>
-        <input type="checkbox" id="hobby" class="myInput hobby" name="hobby3" value="Golf">
+        <input type="checkbox" id="hobby" class="myInput hobby" name="hobby3" value="Golf" >
         <label for="vehicle3">Golf</label><br><br>
 
         Address: </p>
-        <textarea id="address" class="myInput" name="address" style="width: 50%; height: 100px;"></textarea><br><br>
+        <textarea id="address" class="myInput" name="address" style="width: 50%; height: 100px;" ></textarea>
         <span id="addresserrormessage" class="errormsg hide">Address is Required!</span><br><br>
 
         <div class="container">

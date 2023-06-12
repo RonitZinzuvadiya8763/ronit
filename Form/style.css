@@ -59,7 +59,36 @@ input::-webkit-inner-spin-button {
     color: white;
 }
 
+/* #edit {
+    width: 200px;
+    height: 50px;
+    background-color: black;
+    color: white;
+}
+
+#edit:hover {
+    background-color: green;
+    color: white;
+}
+
+#delete {
+    width: 200px;
+    height: 50px;
+    padding-left: 10px;
+    background-color: black;
+    color: white;
+}
+
+#delete:hover {
+    background-color: rgb(255, 0, 0);
+    color: white;
+} */
+
 .hide {
+    display: none;
+}
+
+.hideoperation {
     display: none;
 }
 
