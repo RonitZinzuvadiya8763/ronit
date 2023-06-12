@@ -23,9 +23,9 @@
         <span id="emailerrormessage" class="errormsg hide">Email is Required!</span><br><br>
 
         Phone: </p><input type="number" class="myInput mobile-valid" name="phone" id="phone" style="width: 50%; height: 30px;">
-        <span id="phoneerrormessage" class="errormsg hide">Phone is Required!</span>
+        <span id="phoneerrormessage" class="errormsg hide">Correct Phone Number is Required!</span>
         <!-- <span id="mobile-valid"><i class="errormsg"></i>Valid Mobile No</span>  -->
-        <!-- <span id="mobile-invalid" >Invalid mobile No</span> -->
+        <span id="mobile-invalid" class="errormsg hide">Invalid mobile No</span>
         <br><br>
 
         Gender: </p><input class="gender" type="radio" id="gender1" class="myInput" name="gender" value="Male" checked>
@@ -64,6 +64,7 @@
             <td>Gender</td>
             <td>Hobby</td>
             <td>Address</td>
+            <td>Operation</td>
         </tbody>
     </table>
 
