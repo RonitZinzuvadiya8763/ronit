@@ -42,8 +42,7 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">Submit</button>
-                <button type="submit" class="btn btn-primary"><a class="btn btn-primary" href="{{ route('users.index') }}"></a>Back</button>
-                    
+                <button type="submit" class="btn btn-primary"><a class="btn btn-primary" href="{{ route('users.index') }}"></a>Back</button>                    
         </div>
     </div>
    

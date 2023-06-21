@@ -31,7 +31,7 @@
             <td>{{ ++$i }}</td>
             <td>{{ $user->name }}</td>
             <td>{{ $user->email }}</td>
-            <td >
+            <td>
                 <form action="{{ route('users.destroy',$user->id) }}" method="POST">
    
                     <a class="btn btn-info" href="{{ route('users.show',$user->id) }}">Show</a>
@@ -41,7 +41,7 @@
                     @csrf
                     @method('DELETE')
       
-                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <button class="btn btn-danger">Delete</button>
                 </form>
             </td>
         </tr>
