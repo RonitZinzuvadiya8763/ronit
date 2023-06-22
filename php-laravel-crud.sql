@@ -259,7 +259,7 @@ ALTER TABLE `subjects`
 --
 ALTER TABLE `table`
   MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
-
+ 
 --
 -- AUTO_INCREMENT for table `users`
 --
