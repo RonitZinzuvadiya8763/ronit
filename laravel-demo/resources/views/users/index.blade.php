@@ -7,7 +7,7 @@
                 <h2>Laravel 8 CRUD Example</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('users.create') }}"> Create New user</a>
+                <a class="btn btn-success" href="{{ route('users.create') }}">Create New User</a>
             </div>
         </div>
     </div>
@@ -34,14 +34,14 @@
             <td>
                 <form action="{{ route('users.destroy',$user->id) }}" method="POST">
    
-                    <a class="btn btn-info" href="{{ route('users.show',$user->id) }}">Show</a>
+                    <a class="btn btn-info" href="{{ route('users.show',$user->id) }}" style="color:black">Show</a>
     
-                    <a class="btn btn-primary" href="{{ route('users.edit',$user->id) }}">Edit</a>
+                    <a class="btn btn-primary" href="{{ route('users.edit',$user->id) }}" style="color:#4A8E8B">Edit</a>
    
                     @csrf
                     @method('DELETE')
       
-                    <button class="btn btn-danger">Delete</button>
+                    <button class="btn" style="color:red">Delete</button>
                 </form>
             </td>
         </tr>
